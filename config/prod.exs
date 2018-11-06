@@ -61,4 +61,13 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+config :fotd, FotdWeb.Endpoint,
+  secret_key_base: System.get_env("PHOENIX_SECRET")
+
+config :fotd, Fotd.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "fotd_dev",
+  hostname: "localhost",
+  pool_size: 10
