@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elixir Function Of The Day</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container content has-text-centered">
+        <h1 class="title">
+          <span class="icon is-large has-text-info"><i class="fas fa-coffee"></i></span>&nbsp;
+          <br/>
+          Elixir Function Of The Day
+        </h1>
+        <p class="subtitle">
+        A start page for alchemists!
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container content">
+        <%= render @view_module, @view_template, assigns %>
+      </div>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+          <span class="icon"><i class="fas fa-child"></i></span>
+          Made in <a href="https://mtod.org">mtod.org</a>, 2018.
+          </p>
+          <p>
+          <strong>Apache License 2.0</strong>. Fork me on <a href="https://github.com/aerosol/fotd">GitHub</a>.
+          </p>
+        </div>
+      </footer>
+  </body>
+</html>

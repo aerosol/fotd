@@ -1,0 +1,10 @@
+<div class="columns is-mobile is-centered">
+  <div class="column is-two-thirds">
+    <h2 class="notification is-warning has-text-centered"><%= mfa @fotd %></h2>
+    <h2><%= signature_type @fotd %> signature:</h2>
+    <p><pre><%= signature @fotd %></pre></p>
+    <h2>Documentation:</h2>
+    <%= render_docs @fotd %>
+  </div>
+</div>
+
