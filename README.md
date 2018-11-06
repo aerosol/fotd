@@ -10,3 +10,4 @@ Ecto and Phoenix included.
  - [ ] clean up phoenix boilerplate leftovers
  - [x] resolve the JS dependency alert :rage: 
  - [ ] setup CI
+ - [ ] try to ensure *somewhat* deterministic function count, regardless of build env
