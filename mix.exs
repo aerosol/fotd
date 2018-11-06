@@ -8,6 +8,7 @@ defmodule Fotd.Mixfile do
       elixir: "~> 1.4",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix] ++ Mix.compilers,
+      build_embedded: Mix.env in [:dev, :prod],
       start_permanent: Mix.env == :prod,
       aliases: [],
       deps: deps()
