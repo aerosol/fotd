@@ -12,9 +12,12 @@ defmodule Fotd do
   """
   def random(seed) do
     :rand.seed(:exs1024s, seed)
-    {type, module, func, arity, signature, docs} = Enum.random(get_all_docs())
+    all = get_all_docs()
+
+    {type, module, func, arity, signature, docs} = Enum.random(all)
 
     %{
+      out_of: Enum.count(all),
       type: type,
       module: module,
       func: func,
