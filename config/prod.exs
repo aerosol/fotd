@@ -15,7 +15,13 @@ use Mix.Config
 # which you typically run after static files are built.
 config :fotd, FotdWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "example.com", port: 80]
+  url: [host: "elixirfunctionoftheday.com"],
+  force_ssl: [
+    host: nil,
+    hsts: true,
+    rewrite_on: [:x_forwarded_proto],
+    subdomains: true
+  ]
 
 # Do not print debug messages in production
 config :logger, level: :info
