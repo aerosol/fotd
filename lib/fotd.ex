@@ -1,11 +1,18 @@
 defmodule Fotd do
   import ExDoc.Formatter.HTML.Autolink, only: [project_doc: 2]
 
-  @banned [
-    "Earmark",
-    "Fotd",
-    "ExDoc"
-  ]
+  @allowed_apps ~w(
+    ecto
+    eex
+    elixir
+    ex_unit
+    iex
+    logger
+    mix
+    phoenix
+    phoenix_html
+    plug
+  )a
 
   @doc """
   Get random function information
@@ -58,14 +65,14 @@ defmodule Fotd do
   end
 
   def legit?(mod) when is_atom(mod) do
-    module = Atom.to_string(mod)
-    elixir?(module) and not banned?(module)
+    elixir?(mod) and allowed?(mod)
   end
 
+  defp elixir?(mod) when is_atom(mod), do: elixir?(Atom.to_string(mod))
   defp elixir?("Elixir." <> _), do: true
   defp elixir?(_), do: false
 
-  defp banned?(mod) when is_binary(mod) do
-    Enum.any?(@banned, &String.starts_with?(mod, "Elixir." <> &1))
+  defp allowed?(mod) when is_atom(mod) do
+    Application.get_application(mod) in @allowed_apps
   end
 end
