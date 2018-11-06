@@ -12,3 +12,4 @@ Ecto and Phoenix included.
  - [ ] setup CI
  - [ ] try to ensure *somewhat* deterministic function count, regardless of build env
  - [ ] return cache headers
+ - [ ] fix crappy view on mobile
