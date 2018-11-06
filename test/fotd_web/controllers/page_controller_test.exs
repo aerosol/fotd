@@ -3,6 +3,6 @@ defmodule FotdWeb.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200) =~ "Elixir Function Of The Day"
+    assert html_response(conn, 200) =~ "Elixir Function of the Day"
   end
 end
