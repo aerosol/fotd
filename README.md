@@ -7,3 +7,5 @@ Ecto and Phoenix included.
 
  - [ ] proper hexdocs links whenever possible
  - [ ] skip daily seeding cookie
+ - [ ] clean up phoenix boilerplate leftovers
+ - [ ] resolve the JS dependency alert :rage: 
