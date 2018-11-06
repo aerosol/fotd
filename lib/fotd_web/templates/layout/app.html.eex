@@ -26,7 +26,7 @@
       </div>
       <footer class="footer">
         <div class="content has-text-centered">
-          <p>Come back for more tomorrow! We have <%= @fotd.out_of %> functions!</p>
+          <p>Check back tomorrow! We have <%= @fotd.out_of %> functions!</p>
           <p>
           <span class="icon"><i class="fas fa-child"></i></span>
           Made in <a href="https://mtod.org">mtod.org</a>, 2018.
