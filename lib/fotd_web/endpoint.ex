@@ -1,10 +1,6 @@
 defmodule FotdWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :fotd
 
-  plug Plug.Static,
-    at: "/", from: :fotd, gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
-
   if code_reloading? do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
