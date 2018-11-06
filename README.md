@@ -9,3 +9,4 @@ Ecto and Phoenix included.
  - [ ] skip daily seeding cookie
  - [ ] clean up phoenix boilerplate leftovers
  - [x] resolve the JS dependency alert :rage: 
+ - [ ] setup CI
