@@ -15,6 +15,12 @@ defmodule FotdWeb.PageView do
     |> raw()
   end
 
-  # TODO: update with hexdocs link
+  def hexdocs_link(%{app: app, module: m, func: f, arity: a} = fotd) do
+    # TODO see if we need any escaping here for non alphanumeric names etc.
+    link to: "https://hexdocs.pm/#{app}/#{inspect(m)}.html##{f}/#{a}" do
+      mfa(fotd)
+    end
+  end
+
   def mfa(%{module: m, func: f, arity: a}), do: "#{inspect(m)}.#{f}/#{a}"
 end

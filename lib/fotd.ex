@@ -24,6 +24,7 @@ defmodule Fotd do
 
     %{
       out_of: Enum.count(all),
+      app: Application.get_application(module),
       type: type,
       module: module,
       func: func,
