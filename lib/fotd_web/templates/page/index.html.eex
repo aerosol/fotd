@@ -1,6 +1,13 @@
 <div class="columns is-mobile is-centered">
+
+
   <div class="column is-two-thirds">
     <h2 class="notification is-warning has-text-centered"><%= hexdocs_link(@fotd) %></h2>
+    <div class="level-right">
+    <%= tweet_link @fotd do %>
+      <span class="icon"><i class="fab fa-twitter"></i></span> Tweet it!
+    <% end %>
+    </div>
     <h2><%= signature_type @fotd %> signature:</h2>
     <p><pre><%= signature @fotd %></pre></p>
     <h2>Documentation:</h2>
