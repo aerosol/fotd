@@ -28,17 +28,15 @@ defmodule FotdWeb.PageView do
 
   def mfa(%{module: m, func: f, arity: a}), do: "#{inspect(m)}.#{f}/#{a}"
 
-  def tweet_link(fotd, do: content) do
+  def tweet_url(fotd) do
     base = "https://twitter.com/intent/tweet"
 
     twitter_params = %{
       original_referer: "https://elixirfunctionoftheday.com",
       ref_src: "twsrc^tfw",
-      text: "Look what I found! #{mfa(fotd)} #{make_hexdocs_url(fotd)} https://elixirfunctionoftheday.com #elixir"
+      text: "#{mfa(fotd)} #{make_hexdocs_url(fotd)} found via https://elixirfunctionoftheday.com #elixir"
     }
 
-    link to: "#{base}?#{URI.encode_query(twitter_params)}" do
-      raw content
-    end
+    "#{base}?#{URI.encode_query(twitter_params)}"
   end
 end
