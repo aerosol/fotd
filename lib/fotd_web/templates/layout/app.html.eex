@@ -11,12 +11,14 @@
     <section class="section">
       <div class="container content has-text-centered">
         <h1 class="title">
-          <span class="icon is-large has-text-info"><i class="fas fa-coffee"></i></span>&nbsp;
-          <br/>
-          Elixir Function of the Day
+          <a href="/">
+            <span class="icon is-large has-text-info"><i class="fas fa-coffee"></i></span>&nbsp;
+            <br/>
+            Elixir Function of the Day
+          </a>
         </h1>
         <p class="subtitle">
-        A start page for alchemists!
+        A start page for alchemists! <a href="/diceroll">Roll the dice</a>.
         </p>
       </div>
     </section>
@@ -26,7 +28,7 @@
       </div>
       <footer class="footer">
         <div class="content has-text-centered">
-          <p>Check back tomorrow! We have <%= @fotd.out_of %> functions!</p>
+          <p><a href="/diceroll">Roll the dice</a> or check back later! We have <%= @fotd.out_of %> functions!</p>
           <p>
           <span class="icon"><i class="fas fa-child"></i></span>
           Made in <a href="https://mtod.org">mtod.org</a>, 2018.

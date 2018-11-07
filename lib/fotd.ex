@@ -17,8 +17,7 @@ defmodule Fotd do
   @doc """
   Get random function information
   """
-  def random(seed) do
-    :rand.seed(:exs1024s, seed)
+  def random() do
     all = get_all_docs()
 
     {type, module, func, arity, signature, docs} = Enum.random(all)

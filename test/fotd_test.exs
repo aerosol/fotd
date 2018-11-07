@@ -31,9 +31,4 @@ defmodule FotdTest do
     assert is_binary(signature)
     assert is_binary(docs)
   end
-
-  test "seeding per day somewhat works" do
-    assert Fotd.random({2018,1,1}) == Fotd.random({2018,1,1})
-    refute Fotd.random({2018,1,1}) == Fotd.random({2018,2,1})
-  end
 end
