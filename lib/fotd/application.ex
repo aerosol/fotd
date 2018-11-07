@@ -5,8 +5,9 @@ defmodule Fotd.Application do
     import Supervisor.Spec
 
     children = [
+      supervisor(Fotd.Cache, []),
       supervisor(Fotd.Repo, []),
-      supervisor(FotdWeb.Endpoint, []),
+      supervisor(FotdWeb.Endpoint, [])
     ]
 
     opts = [strategy: :one_for_one, name: Fotd.Supervisor]
