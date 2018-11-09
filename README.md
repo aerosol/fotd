@@ -13,4 +13,5 @@ Ecto and Phoenix included.
  - [ ] try to ensure *somewhat* deterministic function count, regardless of build env
  - [ ] return cache headers
  - [ ] fix crappy view on mobile
+ - [ ] add "improve the docs!" button to fork & edit on github at least - the randomness reveails how some functions are under-documented
 
