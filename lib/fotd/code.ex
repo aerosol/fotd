@@ -29,6 +29,9 @@ defmodule Fotd.Code do
       {:error, _} ->
         acc
 
+      {:docs_v1, _, _, _, :hidden, _, _} ->
+        acc
+
       docs ->
         [{mod, docs} | acc]
     end

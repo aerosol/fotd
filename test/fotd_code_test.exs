@@ -22,6 +22,10 @@ defmodule Fotd.CodeTest do
     assert is_binary(doc)
   end
 
+  test "skip private modules" do
+    assert [] = Fotd.Code.get_module_docs(Kernel.Typespec, [])
+  end
+
   test "all functions docs can be retrieved" do
     assert [{type, module, func, arity, signature, docs} | _] = Fotd.Code.get_all_docs()
     assert is_atom(type)
